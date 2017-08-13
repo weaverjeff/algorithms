@@ -7,11 +7,12 @@
     "jasmine-node": "^1.14.5"
   },
   "devDependencies": {
+    "jasmine-focused": "^1.0.7",
     "jasmine-node": "^1.14.5"
   },
   "scripts": {
-    "test": "jasmine-node ./",
-    "test-watch" : "jasmine-node ./ --autotest"
+    "test": "jasmine-focused ./",
+    "test-watch": "jasmine-focused ./ --autotest"
   },
   "author": "Jeff Weaver",
   "license": "MIT"

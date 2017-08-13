@@ -10,15 +10,14 @@ describe('tree summing', () => {
         tree.add(20);
         tree.add(10);
 
-        //4 + 2 + 4(was 5) + 5 (was 20) + 10 = 25
+//4 + 2 + 4(was 5) + 5 (was 20) + 10 = 25
 /*
-            4
-        2         5
-                    20
-                10
+    4
+2         5
+            20
+        10
 
 */
-    
         let result = sumTree(tree);
         expect(result).toBe(25);
     });
