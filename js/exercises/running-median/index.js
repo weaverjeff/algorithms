@@ -1,5 +1,5 @@
-let MinHeap = require("../data-structures/minHeap");
-let MaxHeap = require("../data-structures/maxHeap");
+let MinHeap = require("../../data-structures/minHeap");
+let MaxHeap = require("../../data-structures/maxHeap");
 
 
 class MedianTracker {
