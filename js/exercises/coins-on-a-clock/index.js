@@ -1,3 +1,10 @@
+// https://stackoverflow.com/questions/43825638/how-can-you-determine-how-to-place-coins-on-a-clock
+// Expressing the coins as a list of buckets with the same modulo allows
+// you to efficiently find the next coin to test and you don't start to
+// calculate with the first penny and then do the same again starting
+// with the second penny (or a 13-coin on a 12-clock), it is basically the same.
+// Additionally it allows to remove and insert items at the current position in O(1).
+// Also reverting is much better than copying whole states on each recursive call.
 
 function solve(coins, hours) {
     h = hours;

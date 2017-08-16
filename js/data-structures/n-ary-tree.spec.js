@@ -1,6 +1,6 @@
 let Tree = require("./n-ary-tree");
 
-fdescribe('n-ary tree', () => {
+describe('n-ary tree', () => {
     it('should create a tree with a root', () => {
         let tree = new Tree();
         tree.add(5);
