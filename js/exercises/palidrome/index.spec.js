@@ -3,14 +3,14 @@ let findMinimumInsertions = palidrome.findMinimumInsertions;
 let findMinimumInsertionsDynamic = palidrome.findMinimumInsertionsDynamic;
 
 describe('minimum insertions for palidrome', () => {
-    it("should return one when adding one character at begining", ()=> {
+      it("should return one when adding one character at begining", ()=> {
         let word = "ab";
-        console.log(word.split(""));
         let result = findMinimumInsertions(word.split(""), 0, word.length -1);
         expect(result).toBe(1);
       });
       it("should return three when adding three character at begining", ()=> {
         let word = "abcd";
+        console.log();
         console.log(word.split(""));
         let result = findMinimumInsertions(word.split(""), 0, word.length -1);
         expect(result).toBe(3);
@@ -26,6 +26,14 @@ describe('minimum insertions for palidrome', () => {
         console.log(word.split(""));
         let result = findMinimumInsertions(word.split(""), 0, word.length -1);
         expect(result).toBe(4);
+      });
+
+      it("should return four when adding four characters at the beginning", ()=> {
+        let word = "geek";
+        console.log();
+        console.log(word.split(""));
+        let result = findMinimumInsertions(word.split(""), 0, word.length - 1);
+        expect(result).toBe(2);
       });
 
 
@@ -53,4 +61,14 @@ describe('minimum insertions for palidrome', () => {
         let result = findMinimumInsertionsDynamic(word.split(""), word.length);
         expect(result).toBe(4);
       });
+      
+      it("should return four when adding four characters at the beginning", ()=> {
+        let word = "geek";
+        console.log();
+        console.log(word.split(""));
+
+        let result = findMinimumInsertionsDynamic(word.split(""), word.length);
+        expect(result).toBe(2);
+      });
+
 });
