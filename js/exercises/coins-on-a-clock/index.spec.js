@@ -21,7 +21,7 @@ describe('coins on a clock', () => {
         expect(true).toBe(true);
     });
 
-    it('recursive2', () => {
+    fit('recursive2', () => {
         var result = solveRecursive.findAll([], 4, 4, 4);
         console.log("result", result);
         expect(true).toBe(true);

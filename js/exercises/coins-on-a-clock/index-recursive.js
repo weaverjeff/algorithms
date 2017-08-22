@@ -1,4 +1,5 @@
 
+//https://github.com/atsepkov/puzzles/tree/master/interviews/easy/coins-on-clock
 
 function verify(sequence) {
     var set = new Set();
@@ -40,41 +41,3 @@ function findAll(sequence, pennies, nickels, dimes) {
 }
 
 module.exports = {verify: verify, findAll: findAll};
-
-/*
-def verify(sequence):
-coinsonclock = [None] * clocksize
-position = 0
-for coin in sequence:
-    position = (position + coinvalue[coin]) % clocksize
-    if (coinsonclock[position]): return False
-    coinsonclock[position] = coin
-return True
-*/
-
-/*
-def findall(sequence, pennies, nickels, dimes):
-if pennies < 0 or nickels < 0 or dimes < 0:
-    return []
-if verify(sequence):
-    if len(sequence) == clocksize:
-        return [sequence]
-    else:
-        return (
-            [], 4, 4, 4
-            [P], 3, 4, 4
-                [PP], 2, 4, 4
-                    [PPP], 1, 4, 4
-                    [PPN], 2, 3, 4
-                [PN], 3, 3, 4
-                [PD], 3, 4, 3
-
-            [N], 4, 3, 4
-            [D], 4, 4, 3
-            findall(sequence + ['P'], pennies - 1, nickels, dimes) +
-            findall(sequence + ['N'], pennies, nickels - 1, dimes) +
-            findall(sequence + ['D'], pennies, nickels, dimes - 1)
-            )
-else:
-    return []
-*/
