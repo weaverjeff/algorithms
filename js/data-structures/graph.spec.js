@@ -1,7 +1,7 @@
 let Graph = require("./graph");
 
 describe('graph tests', () => {
-    fit('should create a graph', () => {
+    it('should create a graph', () => {
         var graph = new Graph();
         graph.addVertex(1);
         graph.addVertex(2);
