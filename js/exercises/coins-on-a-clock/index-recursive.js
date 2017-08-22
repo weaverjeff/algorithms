@@ -7,13 +7,11 @@ function verify(sequence) {
     for(let i = 0; i < sequence.length; i++) {
         let coin = sequence[i];
         position = (position + coin) % 12;
-        console.log("new position", position);
         if (set.has(position)) {
             return false;
         }
         set.add(position);
     }
-    console.log(set);
     return true;
 }
 
